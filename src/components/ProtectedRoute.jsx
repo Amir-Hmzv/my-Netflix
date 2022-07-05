@@ -1,0 +1,19 @@
+import React from 'react';
+import { Navigate } from 'react-router-dom';
+import { UserAuth } from '../context/AuthContext';
+
+const ProtectedRoute = ({children}) => {
+    const { user } = UserAuth();
+    
+
+
+    if (!user) {
+        alert('sign in your account')
+        return <Navigate to='/signin' />;
+      } else {
+        return children;
+      }
+
+};
+
+export default ProtectedRoute;
