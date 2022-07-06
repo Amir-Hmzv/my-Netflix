@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Head from '../components/Head';
 import { UserAuth } from '../context/AuthContext';
 
 const SignIn = () => {
@@ -22,7 +23,8 @@ const SignIn = () => {
   
 
     return (
-        <div>
+        <Head title={'signIn page'}>
+                 <div>
           <div
             className={`absolute inset-0   bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bcae-07a3f8dc141a/f6d7434e-d6de-4185-a6d4-c77a2d08737b/US-en-20220502-popsignuptwoweeks-perspective_alpha_website_medium.jpg')]`}
           >
@@ -69,6 +71,7 @@ const SignIn = () => {
             </div>
           </div>
         </div>
+        </Head>
       );
 };
 
